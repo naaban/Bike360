@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="slider">
+    <ion-slides autoplay="5" loop="true" speed="2500">
+        <ion-slide *ngFor="let slide of slideData">
+          <img src="{{slide.image}}" />
+        </ion-slide>
+      </ion-slides>
+    </div>
+        <ion-row class="due-date">
+            <ion-col  >
+              Due Date
+            </ion-col>
+            <ion-col> 
+              19-5-2019
+            </ion-col>
+          </ion-row>
+
+          <ion-row class="options">
+            <ion-col>
+                <img class="options-images" src="https://png.icons8.com/color/96/000000/plus.png"  (click) = "AddBook()">
+                <div>Add Books</div>
+            </ion-col > 
+            <ion-col >
+                <img class="options-images" src="https://png.icons8.com/color/96/000000/gender-neutral-user.png" (click) = "Profile()">
+                <div>Profile</div>
+            </ion-col>
+            <ion-col  >
+                <img  class="options-images" src="https://png.icons8.com/color/96/000000/recycle-sign.png" (click) = "Renew()">
+                <div>Renew</div>
+            </ion-col>
+          </ion-row>
+          <hr>
+     
+</ion-content>

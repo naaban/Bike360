@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Add Book</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+
+
+<ion-content class="background">
+ 
+    <div padding class="center">
+      <form class="contact1-form validate-form">
+          <div class="wrap-input1 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+            <input class="input1" type="text" name="email" placeholder="  ">
+            <span class="shadow-input1"></span>
+          </div>
+  
+          <div class="wrap-input1 validate-input" data-validate = "Subject is required">
+            <input class="input1" type="password" name="password" placeholder="Password">
+            <span class="shadow-input1"></span>
+          </div>
+  
+          <div class="container-contact1-form-btn">
+            <button class="contact1-form-btn" (click) = "login()">
+              <span>
+                Login
+                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          
+          <div class="container-contact1-form-btn" padding>
+              <button   class="contact1-form-btn" (click)="pushPage()">
+                <span>
+                  Register Now
+                  <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </span>
+              </button>
+            </div>
+        </form>
+        </div>
+  </ion-content>

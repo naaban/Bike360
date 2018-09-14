@@ -1,0 +1,47 @@
+page-home {
+
+    .slider{
+        width: 100%;
+        height: 20%;
+        margin-bottom:2px; 
+    }
+
+    .due-date{
+        border-radius: 21px 21px 21px 21px;
+        -moz-border-radius: 21px 21px 21px 21px;
+        -webkit-border-radius: 21px 21px 21px 21px;
+        border: 0px solid #00838F;
+        width: auto;
+        height: 5%;
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        color: #fff;
+        background-color: #00838F;
+    }
+    .row {
+        margin: 0 auto;
+        text-align: center;
+        background-color: #00838F;
+      }
+      .block {
+    
+        float: left;
+        text-align: center;
+        background-color: #00838F;
+      }
+
+      .column{
+          text-align: center;
+      }
+      .options{
+          background-color: #fff;
+          height: 75px;
+        
+      }
+      .options-images{
+        background-color: #fff;
+        height: 50px;
+      }
+}
