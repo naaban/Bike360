@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams, ViewController, App, LoadingContro
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Observable } from 'rxjs/Observable';
+import { HttpClient } from '@angular/common/http';
+import { ApiProvider } from '../../providers/api/api';
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,14 +20,24 @@ import { StatusBar } from '@ionic-native/status-bar';
 })
 export class LoginPage {
   loading: any;
+  result : any;
+  value :any;
 
-  constructor(public navCtrl: NavController,private statusBar: StatusBar, public navParams: NavParams,public viewCtrl:ViewController,public loadingCtrl:LoadingController) {
-
+  constructor(public navCtrl: NavController,private statusBar: StatusBar, public navParams: NavParams,public viewCtrl:ViewController,public loadingCtrl:LoadingController,
+    public httpClient:HttpClient , public apiProvider : ApiProvider ) {
+      this.getData();
   }
 
+  getData(){
+    this.apiProvider.getData().then(data=>{
+      this.result = data;
+      this.value =this.result.value;
+      console.log(this.result.value);
+    });
+  }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LoginPage');
+  this.apiProvider.getData();
   }
 
   pushPage() {
@@ -57,8 +70,4 @@ export class LoginPage {
 
 
 }
-this.statusBar.overlaysWebView(true);
-
-// set status bar to white
-this.statusBar.backgroundColorByHexString('#ffffff');
 }

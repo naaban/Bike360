@@ -14,4 +14,16 @@ export class ApiProvider {
     console.log('Hello ApiProvider Provider');
   }
 
+  getData(){
+    return new Promise(resolve=>{
+      this.http.get('http://localhost/cbe/retrieve.php').subscribe(data=>{
+        resolve(data);
+
+      },err =>
+      {
+        console.log(err);
+      });
+    }) 
+  }
+
 }

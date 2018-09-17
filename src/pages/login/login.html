@@ -46,4 +46,10 @@
           </div>
       </form>
       </div>
+      <ion-list inset>
+        <ion-item *ngFor="let d of value">
+          <h2>{{d.value}}</h2>
+          <p>{{d.time}}</p>
+        </ion-item>
+      </ion-list>
 </ion-content>

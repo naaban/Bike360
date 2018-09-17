@@ -12,8 +12,6 @@ import { ApiProvider } from '../../providers/api/api';
 export class HomePage {
   data: any;
   constructor(public navCtrl: NavController , public apiProvider : ApiProvider) {
-
-    this.getData();
   }
   slideData = [{ image: "../../assets/imgs/123.png" },{ image: "../../assets/imgs/123@2x.png" },{ image: "../../assets/imgs/book.jpg" }];
 
@@ -26,12 +24,4 @@ export class HomePage {
   Profile(){
     this.navCtrl.push(ProfilePage);
   }
-
-  getData() {
-    this.apiProvider.getData()
-    .then(data => {
-    this.data = data;
-    console.log(this.data);
-    });
-    }
 }
