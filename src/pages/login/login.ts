@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, App, LoadingController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
-
+import { StatusBar } from '@ionic-native/status-bar';
 /**
  * Generated class for the LoginPage page.
  *
@@ -17,12 +17,12 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
   loading: any;
- 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl:ViewController,public loadingCtrl:LoadingController) {
-   
+
+  constructor(public navCtrl: NavController,private statusBar: StatusBar, public navParams: NavParams,public viewCtrl:ViewController,public loadingCtrl:LoadingController) {
+
   }
-  
- 
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
@@ -38,9 +38,9 @@ export class LoginPage {
     //   const index = this.viewCtrl.index;
     //   this.navCtrl.remove(index);
     // });
-    
+
     this.presentLoadingCustom();
-  
+
   }
 
   presentLoadingCustom() {
@@ -52,9 +52,13 @@ export class LoginPage {
     this.loading.onDidDismiss(() => {
       this.navCtrl.setRoot(HomePage);
     });
-  
+
     this.loading.present();
 
-   
+
 }
+this.statusBar.overlaysWebView(true);
+
+// set status bar to white
+this.statusBar.backgroundColorByHexString('#ffffff');
 }

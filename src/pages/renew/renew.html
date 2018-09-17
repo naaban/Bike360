@@ -6,8 +6,45 @@
       <ion-title>Renew</ion-title>
     </ion-navbar>
 </ion-header>
-  
 
-<ion-content padding>
 
+<ion-content >
+
+  <ion-item>
+  <ion-label>Plan</ion-label>
+  <ion-select [(ngModel)]="gender">
+    <ion-option value="3month">3 Months</ion-option>
+    <ion-option value="6month">6 Months</ion-option>
+    <ion-option value="12month">1 Year</ion-option>
+  </ion-select>
+</ion-item>
+    <ion-card class="outer-card">
+      <div class="text-plan">3 Months Plan</div>
+      <div class="text-price">Rs.200/Month</div>
+      <ion-card class="inner-card">
+        <div class="unlimited-text">Unlimited Uploads</div>
+        <hr>
+        <button ion-button class="inner-button">Proceed</button>
+      </ion-card>
+    </ion-card>
+
+    <ion-card class="outer-card">
+      <div class="text-plan">6 Months Plan</div>
+      <div class="text-price">Rs.150/Month</div>
+      <ion-card class="inner-card">
+        <div class="unlimited-text">Unlimited Uploads</div>
+        <hr>
+        <button ion-button class="inner-button">Proceed</button>
+      </ion-card>
+    </ion-card>
+
+    <ion-card class="outer-card">
+      <div class="text-plan">1 Year Plan</div>
+      <div class="text-price">Rs.100/Month</div>
+      <ion-card class="inner-card">
+        <div class="unlimited-text">Unlimited Uploads</div>
+        <hr>
+        <button ion-button class="inner-button">Proceed</button>
+      </ion-card>
+    </ion-card>
 </ion-content>
