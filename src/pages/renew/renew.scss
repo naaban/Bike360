@@ -1,3 +1,35 @@
 page-renew {
+    .text-plan{
+        text-align: center;
+        color: #616161;
+        font-size: 18px;
+    }
+    .text-price{
+        text-align: center;
+        font-size: 15px;
+    }
+    .inner-card{
+        background-color: #00838F;
+        width: auto;
+        font-size: 15px;
+        border-radius: 10px 10px 10px 10px;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+    }
+
+    .inner-button{
+        background-color: #fff;
+        color: #000;
+    }
+
+    .outer-card{
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .unlimited-text{
+      margin-top: 10px;
+      font-size: 15px;
+    }
 
 }

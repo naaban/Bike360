@@ -12,6 +12,7 @@ page-subscribe {
         background-color: #00838F;
         width: auto;
         font-size: 15px;
+        border-radius: 10px 10px 10px 10px;
         margin: 0;
         text-align: center;
         color: #fff;
@@ -20,6 +21,15 @@ page-subscribe {
     .inner-button{
         background-color: #fff;
         color: #000;
+    }
+
+    .outer-card{
+        border-radius: 10px 10px 10px 10px;
+    }
+
+    .unlimited-text{
+      margin-top: 10px;
+      font-size: 15px;
     }
 
 }
