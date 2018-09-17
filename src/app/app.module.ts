@@ -13,6 +13,7 @@ import { AddbookPage } from '../pages/addbook/addbook';
 import { SubscribePage } from '../pages/subscribe/subscribe';
 import { RenewPage } from '../pages/renew/renew';
 import { ProfilePage } from '../pages/profile/profile';
+import { ApiProvider } from '../providers/api/api';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { ProfilePage } from '../pages/profile/profile';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ApiProvider
   ]
 })
 export class AppModule {}
